@@ -18,4 +18,8 @@ describe("titleCase", function(){
   it("will capitalize exception words at the beginning of the title", function(){
     expect(titleCase("the blue dog")).to.equal("The Blue Dog");
   });
+
+  it("allow numbers in the title", function() {
+    expect(titleCase("101 dalmations")).to.equal("101 Dalmations");
+  });
 });
