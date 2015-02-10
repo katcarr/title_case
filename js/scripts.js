@@ -15,3 +15,15 @@ var titleCase = function(title) {
   });
   return titleProper.join(" ");
 }
+
+  $(document).ready(function() {
+    $("form#title-form").submit(function(event) {
+      var title = $("input#title").val();
+      var result = titleCase(title);
+
+      $(".transform").text(result);
+
+      $("#result").show();
+      event.preventDefault();
+    });
+  });
