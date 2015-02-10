@@ -1,9 +1,8 @@
 var titleCase = function(title) {
-  title = title.toLowerCase();
-  var wordSplit = title.split(" ");
+  var wordSplit = title.toLowerCase().split(" ");
   var titleProper = [];
   var index = 0;
-  var exceptions = ["a", "an", "the", "at", "by", "for", "in", "of", "on", "to", "and", "as", "but", "it", "or", "nor"]
+  var exceptions = ["a", "an", "the", "at", "by", "for", "in", "of", "on", "to", "and", "as", "but", "it", "or", "nor"];
 
   wordSplit.forEach(function(word) {
     if ((exceptions.indexOf(word) === -1) || (index === 0)) {

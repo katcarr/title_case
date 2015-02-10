@@ -19,7 +19,12 @@ describe("titleCase", function(){
     expect(titleCase("the blue dog")).to.equal("The Blue Dog");
   });
 
-  it("allow numbers in the title", function() {
+  it("allows numbers in the title", function() {
     expect(titleCase("101 dalmations")).to.equal("101 Dalmations");
   });
+
+  it("converts all letters to lowercase that are not the first letter", function(){
+    expect(titleCase("tHE bLuE dOg")).to.equal("The Blue Dog");
+  });
+
 });
