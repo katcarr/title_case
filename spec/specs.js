@@ -11,4 +11,7 @@ describe("titleCase", function(){
     expect(titleCase("blue dog")).to.equal("Blue Dog");
   });
 
+  it("will not capitalize exception words", function() {
+    expect(titleCase("blue the dog")).to.equal("Blue the Dog");
+  });
 });
